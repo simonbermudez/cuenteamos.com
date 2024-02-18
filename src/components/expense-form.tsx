@@ -147,7 +147,7 @@ export function ExpenseForm({
         <Card>
           <CardHeader>
             <CardTitle>
-              {isCreate ? <>Create expense</> : <>Edit expense</>}
+              {isCreate ? <>Crear gasto</> : <>Editar gasto</>}
             </CardTitle>
           </CardHeader>
           <CardContent className="grid sm:grid-cols-2 gap-6">
@@ -156,7 +156,7 @@ export function ExpenseForm({
               name="title"
               render={({ field }) => (
                 <FormItem className="">
-                  <FormLabel>Expense title</FormLabel>
+                  <FormLabel>Título del gasto</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Monday evening restaurant"
@@ -176,7 +176,7 @@ export function ExpenseForm({
                     />
                   </FormControl>
                   <FormDescription>
-                    Enter a description for the expense.
+                    Descripción del gasto
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -188,7 +188,7 @@ export function ExpenseForm({
               name="expenseDate"
               render={({ field }) => (
                 <FormItem className="sm:order-1">
-                  <FormLabel>Expense date</FormLabel>
+                  <FormLabel>Fecha del gasto</FormLabel>
                   <FormControl>
                     <Input
                       className="date-base"
@@ -200,7 +200,7 @@ export function ExpenseForm({
                     />
                   </FormControl>
                   <FormDescription>
-                    Enter the date the expense was made.
+                    Ingresa la fecha en que se realizó el gasto.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -212,7 +212,7 @@ export function ExpenseForm({
               name="amount"
               render={({ field }) => (
                 <FormItem className="sm:order-3">
-                  <FormLabel>Amount</FormLabel>
+                  <FormLabel>Monto</FormLabel>
                   <div className="flex items-baseline gap-2">
                     <span>{group.currency}</span>
                     <FormControl>
@@ -240,7 +240,7 @@ export function ExpenseForm({
                           />
                         </FormControl>
                         <div>
-                          <FormLabel>This is a reimbursement</FormLabel>
+                          <FormLabel>Esto es un reembolso</FormLabel>
                         </div>
                       </FormItem>
                     )}
@@ -254,7 +254,7 @@ export function ExpenseForm({
               name="category"
               render={({ field }) => (
                 <FormItem className="order-3 sm:order-2">
-                  <FormLabel>Category</FormLabel>
+                  <FormLabel>Categooría</FormLabel>
                   <CategorySelector
                     categories={categories}
                     defaultValue={
@@ -264,7 +264,7 @@ export function ExpenseForm({
                     isLoading={isCategoryLoading}
                   />
                   <FormDescription>
-                    Select the expense category.
+                    Seleciona categoría del gasto
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -276,7 +276,7 @@ export function ExpenseForm({
               name="paidBy"
               render={({ field }) => (
                 <FormItem className="sm:order-5">
-                  <FormLabel>Paid by</FormLabel>
+                  <FormLabel>Pagado por</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={getSelectedPayer(field)}
@@ -293,7 +293,7 @@ export function ExpenseForm({
                     </SelectContent>
                   </Select>
                   <FormDescription>
-                    Select the participant who paid the expense.
+                    Selecciona la persona que pagó el gasto.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -305,7 +305,7 @@ export function ExpenseForm({
         <Card className="mt-4">
           <CardHeader>
             <CardTitle className="flex justify-between">
-              <span>Paid for</span>
+              <span>Pagado por</span>
               <Button
                 variant="link"
                 type="button"
@@ -331,14 +331,14 @@ export function ExpenseForm({
               >
                 {form.getValues().paidFor.length ===
                 group.participants.length ? (
-                  <>Select none</>
+                  <>Seleccionar ningunoe</>
                 ) : (
-                  <>Select all</>
+                  <>Seleccionar todos</>
                 )}
               </Button>
             </CardTitle>
             <CardDescription>
-              Select who the expense was paid for.
+              Selecciona a quién se le pagó el gasto.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -493,7 +493,7 @@ export function ExpenseForm({
             <Collapsible className="mt-5">
               <CollapsibleTrigger asChild>
                 <Button variant="link" className="-mx-4">
-                  Advanced splitting options…
+                  Opciones avanzadas de división…
                 </Button>
               </CollapsibleTrigger>
               <CollapsibleContent>
@@ -503,7 +503,7 @@ export function ExpenseForm({
                     name="splitMode"
                     render={({ field }) => (
                       <FormItem className="sm:order-2">
-                        <FormLabel>Split mode</FormLabel>
+                        <FormLabel>Modo de división</FormLabel>
                         <FormControl>
                           <Select
                             onValueChange={(value) => {
@@ -519,21 +519,21 @@ export function ExpenseForm({
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="EVENLY">Evenly</SelectItem>
+                              <SelectItem value="EVENLY">Equitativamente</SelectItem>
                               <SelectItem value="BY_SHARES">
-                                Unevenly – By shares
+                                Desigualmente – Por participaciones
                               </SelectItem>
                               <SelectItem value="BY_PERCENTAGE">
-                                Unevenly – By percentage
+                                Desigualmente – Porcentaje
                               </SelectItem>
                               <SelectItem value="BY_AMOUNT">
-                                Unevenly – By amount
+                                Desigualmente – Por cantidad
                               </SelectItem>
                             </SelectContent>
                           </Select>
                         </FormControl>
                         <FormDescription>
-                          Select how to split the expense.
+                          Selecciona cómo dividir el gasto
                         </FormDescription>
                       </FormItem>
                     )}
@@ -548,10 +548,10 @@ export function ExpenseForm({
           <Card className="mt-4">
             <CardHeader>
               <CardTitle className="flex justify-between">
-                <span>Attach documents</span>
+                <span>Adjuntar documents</span>
               </CardTitle>
               <CardDescription>
-                See and attach receipts to the expense.
+                Ver y adjuntar recibos al gasto.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -571,10 +571,10 @@ export function ExpenseForm({
 
         <div className="flex mt-4 gap-2">
           <SubmitButton
-            loadingContent={isCreate ? <>Creating…</> : <>Saving…</>}
+            loadingContent={isCreate ? <>Creando…</> : <>Guardando…</>}
           >
             <Save className="w-4 h-4 mr-2" />
-            {isCreate ? <>Create</> : <>Save</>}
+            {isCreate ? <>Crear</> : <>Salvar</>}
           </SubmitButton>
           {!isCreate && onDelete && (
             <AsyncButton
@@ -584,11 +584,11 @@ export function ExpenseForm({
               action={onDelete}
             >
               <Trash2 className="w-4 h-4 mr-2" />
-              Delete
+              Borrar
             </AsyncButton>
           )}
           <Button variant="ghost" asChild>
-            <Link href={`/groups/${group.id}`}>Cancel</Link>
+            <Link href={`/groups/${group.id}`}>Cancelar</Link>
           </Button>
         </div>
       </form>

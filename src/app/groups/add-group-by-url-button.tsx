@@ -26,18 +26,17 @@ export function AddGroupByUrlButton({ reload }: Props) {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button variant="secondary">
-          {/* <Plus className="w-4 h-4 mr-2" /> */}
-          <>Add by URL</>
+          <>Añadir por URL</>
         </Button>
       </PopoverTrigger>
       <PopoverContent
         align={isDesktop ? 'end' : 'start'}
         className="[&_p]:text-sm flex flex-col gap-3"
       >
-        <h3 className="font-bold">Add a group by URL</h3>
+        <h3 className="font-bold">Añadir un grupo por URL</h3>
         <p>
-          If a group was shared with you, you can paste its URL here to add it
-          to your list.
+          Si te compartieron un grupo, puedes pegar su URL aquí para agregarlo
+          a tu lista.
         </p>
         <form
           className="flex gap-2"
@@ -63,7 +62,7 @@ export function AddGroupByUrlButton({ reload }: Props) {
           <Input
             type="url"
             required
-            placeholder="https://spliit.app/..."
+            placeholder="https://cuenteamos.app/..."
             className="flex-1 text-base"
             value={url}
             disabled={pending}
@@ -82,7 +81,7 @@ export function AddGroupByUrlButton({ reload }: Props) {
         </form>
         {error && (
           <p className="text-destructive">
-            Oops, we are not able to find the group from the URL you provided…
+            Oops, no pudimos encontrar el grupo desde la URL que proporcionaste...
           </p>
         )}
       </PopoverContent>

@@ -52,91 +52,91 @@ export function CategoryIcon({
 
 function getCategoryIcon(category: string): LucideIcon {
   switch (category) {
-    case 'Uncategorized/General':
+    case 'Sin categoría/General':
       return Banknote
-    case 'Uncategorized/Payment':
+    case 'Sin categoría/Pago':
       return Banknote
-    case 'Entertainment/Entertainment':
+    case 'Entretenimiento/Entretenimiento':
       return FerrisWheel
-    case 'Entertainment/Games':
+    case 'Entretenimiento/Juegos':
       return Dices
-    case 'Entertainment/Movies':
+    case 'Entretenimiento/Películas':
       return Clapperboard
-    case 'Entertainment/Music':
+    case 'Entretenimiento/Música':
       return Music
-    case 'Entertainment/Sports':
+    case 'Entretenimiento/Deportes':
       return Dumbbell
-    case 'Food and Drink/Food and Drink':
+    case 'Comida y Bebida/Comida y Bebida':
       return Utensils
-    case 'Food and Drink/Dining Out':
+    case 'Comida y Bebida/Cenas fuera':
       return Martini
-    case 'Food and Drink/Groceries':
+    case 'Comida y Bebida/Comestibles':
       return ShoppingCart
-    case 'Food and Drink/Liquor':
+    case 'Comida y Bebida/Licores':
       return Wine
-    case 'Home/Home':
+    case 'Hogar/Hogar':
       return Home
-    case 'Home/Electronics':
+    case 'Hogar/Electrónicos':
       return Plug
-    case 'Home/Furniture':
+    case 'Hogar/Muebles':
       return Armchair
-    case 'Home/Household Supplies':
+    case 'Hogar/Suministros del hogar':
       return Lamp
-    case 'Home/Maintenance':
+    case 'Hogar/Mantenimiento':
       return Wrench
-    case 'Home/Mortgage':
+    case 'Hogar/Hipoteca':
       return Landmark
-    case 'Home/Pets':
+    case 'Hogar/Mascotas':
       return Cat
-    case 'Home/Rent':
+    case 'Hogar/Alquiler':
       return PiggyBank
-    case 'Home/Services':
+    case 'Hogar/Servicios':
       return Wrench
-    case 'Life/Childcare':
+    case 'Vida/Cuidado infantil':
       return Baby
-    case 'Life/Clothing':
+    case 'Vida/Ropa':
       return Shirt
-    case 'Life/Education':
+    case 'Vida/Educación':
       return LibraryBig
-    case 'Life/Gifts':
+    case 'Vida/Regalos':
       return Gift
-    case 'Life/Insurance':
+    case 'Vida/Seguros':
       return Landmark
-    case 'Life/Medical Expenses':
+    case 'Vida/Gastos médicos':
       return Stethoscope
-    case 'Life/Taxes':
+    case 'Vida/Impuestos':
       return Banknote
-    case 'Transportation/Transportation':
+    case 'Transporte/Transporte':
       return Bus
-    case 'Transportation/Bicycle':
+    case 'Transporte/Bicicleta':
       return Bike
-    case 'Transportation/Bus/Train':
+    case 'Transporte/Autobús/Tren':
       return Train
-    case 'Transportation/Car':
+    case 'Transporte/Coche':
       return Car
-    case 'Transportation/Gas/Fuel':
+    case 'Transporte/Gas/Combustible':
       return Fuel
-    case 'Transportation/Hotel':
+    case 'Transporte/Hotel':
       return Hotel
-    case 'Transportation/Parking':
+    case 'Transporte/Aparcamiento':
       return ParkingMeter
-    case 'Transportation/Plane':
+    case 'Transporte/Avión':
       return Plane
-    case 'Transportation/Taxi':
+    case 'Transporte/Taxi':
       return CarTaxiFront
-    case 'Utilities/Utilities':
+    case 'Servicios públicos/Servicios públicos':
       return Banknote
-    case 'Utilities/Cleaning':
+    case 'Servicios públicos/Limpieza':
       return Eraser
-    case 'Utilities/Electricity':
+    case 'Servicios públicos/Electricidad':
       return PlugZap
-    case 'Utilities/Heat/Gas':
+    case 'Servicios públicos/Calor/Gas':
       return ThermometerSun
-    case 'Utilities/Trash':
+    case 'Servicios públicos/Basura':
       return Trash
-    case 'Utilities/TV/Phone/Internet':
+    case 'Servicios públicos/TV/Teléfono/Internet':
       return Phone
-    case 'Utilities/Water':
+    case 'Servicios públicos/Agua':
       return CupSoda
     default:
       return Banknote

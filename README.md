@@ -1,6 +1,6 @@
 # Cuenteamos
 
-[<img alt="cuenteamos" height="60" src="https://github.com/cuenteamos-app/cuenteamos/blob/main/public/logo-with-text.png?raw=true" />](https://cuenteamos.com)
+[<img alt="cuenteamos" height="60" src="https://github.com/simonbermudez/cuenteamos.com/blob/main/public/logo-with-text.png?raw=true" />](https://cuenteamos.com)
 
 cuenteamos es una alternativa gratuita y de código abierto a Splitwise. Puedes utilizar la instancia oficial en [cuenteamos.com](https://cuenteamos.com) o implementar tu propia instancia:
 
@@ -14,18 +14,18 @@ cuenteamos es una alternativa gratuita y de código abierto a Splitwise. Puedes 
 - [x] Crear gastos de reembolso
 - [x] Aplicación web progresiva
 - [x] Seleccionar todos/ningún participante para los gastos
-- [x] Dividir gastos de manera desigual [(#6)](https://github.com/cuenteamos-app/cuenteamos/issues/6)
-- [x] Marcar un grupo como favorito [(#29)](https://github.com/cuenteamos-app/cuenteamos/issues/29)
-- [x] Indicar quién eres al abrir un grupo [(#7)](https://github.com/cuenteamos-app/cuenteamos/issues/7)
-- [x] Asignar una categoría a los gastos [(#35)](https://github.com/cuenteamos-app/cuenteamos/issues/35)
-- [x] Buscar gastos en un grupo [(#51)](https://github.com/cuenteamos-app/cuenteamos/issues/51)
-- [x] Subir y adjuntar imágenes a los gastos [(#63)](https://github.com/cuenteamos-app/cuenteamos/issues/63)
-- [x] Crear gasto escaneando un recibo [(#23)](https://github.com/cuenteamos-app/cuenteamos/issues/23)
+- [x] Dividir gastos de manera desigual [(#6)](https://github.com/simonbermudez/cuenteamos.com/issues/6)
+- [x] Marcar un grupo como favorito [(#29)](https://github.com/simonbermudez/cuenteamos.com/issues/29)
+- [x] Indicar quién eres al abrir un grupo [(#7)](https://github.com/simonbermudez/cuenteamos.com/issues/7)
+- [x] Asignar una categoría a los gastos [(#35)](https://github.com/simonbermudez/cuenteamos.com/issues/35)
+- [x] Buscar gastos en un grupo [(#51)](https://github.com/simonbermudez/cuenteamos.com/issues/51)
+- [x] Subir y adjuntar imágenes a los gastos [(#63)](https://github.com/simonbermudez/cuenteamos.com/issues/63)
+- [x] Crear gasto escaneando un recibo [(#23)](https://github.com/simonbermudez/cuenteamos.com/issues/23)
 
 ### Posibles características futuras
 
-- [ ] Capacidad para crear gastos recurrentes [(#5)](https://github.com/cuenteamos-app/cuenteamos/issues/5)
-- [ ] Importar gastos desde Splitwise [(#22)](https://github.com/cuenteamos-app/cuenteamos/issues/22)
+- [ ] Capacidad para crear gastos recurrentes [(#5)](https://github.com/simonbermudez/cuenteamos.com/issues/5)
+- [ ] Importar gastos desde Splitwise [(#22)](https://github.com/simonbermudez/cuenteamos.com/issues/22)
 
 ## Pila tecnológica
 

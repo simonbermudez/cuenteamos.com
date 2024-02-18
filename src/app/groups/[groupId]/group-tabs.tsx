@@ -21,9 +21,9 @@ export function GroupTabs({ groupId }: Props) {
       }}
     >
       <TabsList>
-        <TabsTrigger value="expenses">Expenses</TabsTrigger>
-        <TabsTrigger value="balances">Balances</TabsTrigger>
-        <TabsTrigger value="edit">Settings</TabsTrigger>
+        <TabsTrigger value="expenses">Gastos</TabsTrigger>
+        <TabsTrigger value="balances">Saldos</TabsTrigger>
+        <TabsTrigger value="edit">Configuración</TabsTrigger>
       </TabsList>
     </Tabs>
   )

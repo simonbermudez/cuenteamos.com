@@ -19,12 +19,12 @@ type Props = {
 }
 
 const EXPENSE_GROUPS = {
-  THIS_WEEK: 'This week',
-  EARLIER_THIS_MONTH: 'Earlier this month',
-  LAST_MONTH: 'Last month',
-  EARLIER_THIS_YEAR: 'Earlier this year',
-  LAST_YEAR: 'Last year',
-  OLDER: 'Older',
+  THIS_WEEK: 'Esta semana',
+  EARLIER_THIS_MONTH: 'A principios de este mes',
+  LAST_MONTH: 'El mes pasado',
+  EARLIER_THIS_YEAR: 'A principios de este año',
+  LAST_YEAR: 'El año pasado',
+  OLDER: 'Anterior',
 }
 
 function getExpenseGroup(date: Dayjs, today: Dayjs) {
@@ -132,9 +132,9 @@ export function ExpenseList({
                     {expense.title}
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    Paid by{' '}
+                    Pagado por{' '}
                     <strong>{getParticipant(expense.paidById)?.name}</strong>{' '}
-                    for{' '}
+                    para{' '}
                     {expense.paidFor.map((paidFor: any, index: number) => (
                       <Fragment key={index}>
                         {index !== 0 && <>, </>}
@@ -180,10 +180,10 @@ export function ExpenseList({
     </>
   ) : (
     <p className="px-6 text-sm py-6">
-      Your group doesn’t contain any expense yet.{' '}
+      Tu grupo aún no tiene ningún gasto.{' '}
       <Button variant="link" asChild className="-m-4">
         <Link href={`/groups/${groupId}/expenses/create`}>
-          Create the first one
+          Crea el primero
         </Link>
       </Button>
     </p>

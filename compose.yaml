@@ -1,6 +1,6 @@
 services:
   app:
-    image: spliit2:latest
+    image: cuenteamos2:latest
     ports:
       - 3030:3000
     env_file:

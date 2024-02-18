@@ -42,7 +42,7 @@ export function ActiveUserModal({ group }: Props) {
 
   function updateOpen(open: boolean) {
     if (!open && !localStorage.getItem(`${group.id}-activeUser`)) {
-      localStorage.setItem(`${group.id}-activeUser`, 'None')
+      localStorage.setItem(`${group.id}-activeUser`, 'Ninguno')
     }
     setOpen(open)
   }
@@ -52,16 +52,15 @@ export function ActiveUserModal({ group }: Props) {
       <Dialog open={open} onOpenChange={updateOpen}>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle>Who are you?</DialogTitle>
+            <DialogTitle>¿Quién eres?</DialogTitle>
             <DialogDescription>
-              Tell us which participant you are to let us customize how the
-              information is displayed.
+              Indícanos qué participante eres para personalizar la forma en que se muestra la información.
             </DialogDescription>
           </DialogHeader>
           <ActiveUserForm group={group} close={() => setOpen(false)} />
           <DialogFooter className="sm:justify-center">
             <p className="text-sm text-center text-muted-foreground">
-              This setting can be changed later in the group settings.
+              Esta configuración se puede cambiar más tarde en la configuración del grupo.
             </p>
           </DialogFooter>
         </DialogContent>
@@ -73,10 +72,9 @@ export function ActiveUserModal({ group }: Props) {
     <Drawer open={open} onOpenChange={updateOpen}>
       <DrawerContent>
         <DrawerHeader className="text-left">
-          <DrawerTitle>Who are you?</DrawerTitle>
+          <DrawerTitle>¿Quién eres?</DrawerTitle>
           <DrawerDescription>
-            Tell us which participant you are to let us customize how the
-            information is displayed.
+            Indícanos qué participante eres para personalizar la forma en que se muestra la información.
           </DrawerDescription>
         </DrawerHeader>
         <ActiveUserForm
@@ -86,7 +84,7 @@ export function ActiveUserModal({ group }: Props) {
         />
         <DrawerFooter className="pt-2">
           <p className="text-sm text-center text-muted-foreground">
-            This setting can be changed later in the group settings.
+            Esta configuración se puede cambiar más tarde en la configuración del grupo.
           </p>
         </DrawerFooter>
       </DrawerContent>
@@ -99,7 +97,7 @@ function ActiveUserForm({
   close,
   className,
 }: ComponentProps<'form'> & { group: Props['group']; close: () => void }) {
-  const [selected, setSelected] = useState('None')
+  const [selected, setSelected] = useState('Ninguno')
 
   return (
     <form
@@ -115,7 +113,7 @@ function ActiveUserForm({
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="none" id="none" />
             <Label htmlFor="none" className="italic font-normal flex-1">
-              I don’t want to select anyone
+              No quiero seleccionar a nadie
             </Label>
           </div>
           {group.participants.map((participant) => (
@@ -128,7 +126,7 @@ function ActiveUserForm({
           ))}
         </div>
       </RadioGroup>
-      <Button type="submit">Save changes</Button>
+      <Button type="submit">Guardar cambios</Button>
     </form>
   )
 }

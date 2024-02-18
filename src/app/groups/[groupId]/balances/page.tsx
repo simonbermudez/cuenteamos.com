@@ -18,7 +18,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
-  title: 'Balances',
+  title: 'Saldos',
 }
 
 export default async function GroupPage({
@@ -38,9 +38,9 @@ export default async function GroupPage({
     <>
       <Card className="mb-4">
         <CardHeader>
-          <CardTitle>Balances</CardTitle>
+          <CardTitle>Saldos</CardTitle>
           <CardDescription>
-            This is the amount that each participant paid or was paid for.
+            Esta es la cantidad que cada participante pagó o recibió.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -53,10 +53,9 @@ export default async function GroupPage({
       </Card>
       <Card className="mb-4">
         <CardHeader>
-          <CardTitle>Suggested reimbursements</CardTitle>
+          <CardTitle>Reembolsos sugeridos</CardTitle>
           <CardDescription>
-            Here are suggestions for optimized reimbursements between
-            participants.
+            Aquí hay sugerencias para reembolsos optimizados entre participantes.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-0">

@@ -84,8 +84,7 @@ export function RecentGroupList() {
     return (
       <GroupsPage reload={loadGroups}>
         <p>
-          <Loader2 className="w-4 m-4 mr-2 inline animate-spin" /> Loading
-          recent groups…
+          <Loader2 className="w-4 m-4 mr-2 inline animate-spin" /> Cargando grupos recientes…
         </p>
       </GroupsPage>
     )
@@ -95,12 +94,12 @@ export function RecentGroupList() {
     return (
       <GroupsPage reload={loadGroups}>
         <div className="text-sm space-y-2">
-          <p>You have not visited any group recently.</p>
+          <p>No has visitado ningún grupo recientemente.</p>
           <p>
             <Button variant="link" asChild className="-m-4">
-              <Link href={`/groups/create`}>Create one</Link>
+              <Link href={`/groups/create`}>Crea uno</Link>
             </Button>{' '}
-            or ask a friend to send you the link to an existing one.
+            o pide a un amigo que te envíe el enlace a uno existente.
           </p>
         </div>
       </GroupsPage>
@@ -113,7 +112,7 @@ export function RecentGroupList() {
     <GroupsPage reload={loadGroups}>
       {starredGroupInfo.length > 0 && (
         <>
-          <h2 className="mb-2">Starred groups</h2>
+          <h2 className="mb-2">Grupos destacados</h2>
           <GroupList
             groups={starredGroupInfo}
             state={state}
@@ -124,14 +123,14 @@ export function RecentGroupList() {
 
       {groupInfo.length > 0 && (
         <>
-          <h2 className="mt-6 mb-2">Recent groups</h2>
+          <h2 className="mt-6 mb-2">Grupos recientes</h2>
           <GroupList groups={groupInfo} state={state} setState={setState} />
         </>
       )}
 
       {archivedGroupInfo.length > 0 && (
         <>
-          <h2 className="mt-6 mb-2 opacity-50">Archived groups</h2>
+          <h2 className="mt-6 mb-2 opacity-50">Grupos archivados</h2>
           <div className="opacity-50">
             <GroupList
               groups={archivedGroupInfo}
@@ -176,14 +175,14 @@ function GroupsPage({
     <>
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <h1 className="font-bold text-2xl flex-1">
-          <Link href="/groups">My groups</Link>
+          <Link href="/groups">Mis grupos</Link>
         </h1>
         <div className="flex gap-2">
           <AddGroupByUrlButton reload={reload} />
           <Button asChild>
             <Link href="/groups/create">
               {/* <Plus className="w-4 h-4 mr-2" /> */}
-              <>Create</>
+              <>Crear</>
             </Link>
           </Button>
         </div>

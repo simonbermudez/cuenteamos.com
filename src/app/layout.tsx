@@ -14,15 +14,15 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_BASE_URL),
   title: {
-    default: 'Spliit · Share Expenses with Friends & Family',
-    template: '%s · Spliit',
+    default: 'Cuenteamos · Compartir Gastos con Amigos y Familiares',
+    template: '%s · Cuenteamos',
   },
   description:
-    'Spliit is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
+    'Cuenteamos es una aplicación web minimalista para compartir gastos con amigos y familiares. Sin anuncios, sin cuenta, sin problema.',
   openGraph: {
-    title: 'Spliit · Share Expenses with Friends & Family',
+    title: 'Cuenteamos · Compartir Gastos con Amigos y Familiares',
     description:
-      'Spliit is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
+      'Cuenteamos es una aplicación web minimalista para compartir gastos con amigos y familiares. Sin anuncios, sin cuenta, sin problema.',
     images: `/banner.png`,
     type: 'website',
     url: '/',
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
     creator: '@scastiel',
     site: '@scastiel',
     images: `/banner.png`,
-    title: 'Spliit · Share Expenses with Friends & Family',
+    title: 'Cuenteamos · Compartir Gastos con Amigos y Familiares',
     description:
-      'Spliit is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
+      'Cuenteamos es una aplicación web minimalista para compartir gastos con amigos y familiares. Sin anuncios, sin cuenta, sin problema.',
   },
   appleWebApp: {
     capable: true,
-    title: 'Spliit',
+    title: 'Cuenteamos',
   },
-  applicationName: 'Spliit',
+  applicationName: 'Cuenteamos',
   icons: [
     {
       url: '/android-chrome-192x192.png',
@@ -65,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <ApplePwaSplash icon="/logo-with-text.png" color="#027756" />
       <body className="pt-16 min-h-[100dvh] flex flex-col items-stretch bg-slate-50 bg-opacity-30 dark:bg-background">
         <ThemeProvider
@@ -88,11 +88,11 @@ export default function RootLayout({
                   className="m-1 h-auto w-auto"
                   width={(35 * 522) / 180}
                   height={35}
-                  alt="Spliit"
+                  alt="Cuenteamos"
                 />
               </h1>
             </Link>
-            <div role="navigation" aria-label="Menu" className="flex">
+            <div role="navigation" aria-label="Menú" className="flex">
               <ul className="flex items-center text-sm">
                 <li>
                   <Button
@@ -100,7 +100,7 @@ export default function RootLayout({
                     asChild
                     className="-my-3 text-primary"
                   >
-                    <Link href="/groups">Groups</Link>
+                    <Link href="/groups">Grupos</Link>
                   </Button>
                 </li>
                 <li>
@@ -121,24 +121,24 @@ export default function RootLayout({
                     className="m-1 h-auto w-auto"
                     width={(35 * 522) / 180}
                     height={35}
-                    alt="Spliit"
+                    alt="Cuenteamos"
                   />
                 </Link>
               </div>
               <div className="flex flex-col space-y a--no-underline-text-white">
-                <span>Made in Montréal, Québec 🇨🇦</span>
+                <span>Hecho en Caracas, Venezuela 🇻🇪</span>
                 <span>
-                  Built by{' '}
-                  <a href="https://scastiel.dev" target="_blank" rel="noopener">
-                    Sebastien Castiel
+                  Creado por{' '}
+                  <a href="https://simonbermudez.com" target="_blank" rel="noopener">
+                    Simón Bermúdez
                   </a>{' '}
-                  and{' '}
+                  y{' '}
                   <a
-                    href="https://github.com/spliit-app/spliit/graphs/contributors"
+                    href="https://www.linkedin.com/in/smejiass/"
                     target="_blank"
                     rel="noopener"
                   >
-                    contributors
+                    Simón Mejías
                   </a>
                 </span>
               </div>

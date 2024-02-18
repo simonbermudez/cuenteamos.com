@@ -20,14 +20,14 @@ export async function extractExpenseInformationFromImage(imageUrl: string) {
           {
             type: 'text',
             text: `
-              This image contains a receipt.
-              Read the total amount and store it as a non-formatted number without any other text or currency.
-              Then guess the category for this receipt amoung the following categories and store its ID: ${categories.map(
+              Esta imagen contiene un recibo.
+              Lea el monto total y guárdelo como un número no formateado sin ningún otro texto o moneda.
+              Luego, adivine la categoría para este recibo entre las siguientes categorías y almacene su ID: ${categories.map(
                 (category) => formatCategoryForAIPrompt(category),
               )}.
-              Guess the expense’s date and store it as yyyy-mm-dd.
-              Guess a title for the expense.
-              Return the amount, the category, the date and the title with just a comma between them, without anything else.`,
+              Adivine la fecha del gasto y guárdela como yyyy-mm-dd.
+              Adivine un título para el gasto.
+              Devuelva el monto, la categoría, la fecha y el título solo con una coma entre ellos, sin nada más.`,
           },
         ],
       },

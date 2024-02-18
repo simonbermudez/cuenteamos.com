@@ -16,7 +16,7 @@ export function RecentGroupsPage() {
           <Button asChild>
             <Link href="/groups/create">
               {/* <Plus className="w-4 h-4 mr-2" /> */}
-              <>Create</>
+              <>Crear</>
             </Link>
           </Button>
         </div>

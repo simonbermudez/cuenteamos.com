@@ -1,4 +1,3 @@
-'use client'
 import { RecentGroupsState } from '@/app/groups/recent-group-list'
 import {
   RecentGroup,
@@ -118,12 +117,12 @@ export function RecentGroupListCard({
                           groups: state.groups.filter((g) => g.id !== group.id),
                         })
                         toast.toast({
-                          title: 'Group has been removed',
+                          title: 'El grupo ha sido eliminado',
                           description:
-                            'The group was removed from your recent groups list.',
+                            'El grupo fue eliminado de tu lista de grupos recientes.',
                           action: (
                             <ToastAction
-                              altText="Undo group removal"
+                              altText="Deshacer eliminación del grupo"
                               onClick={() => {
                                 saveRecentGroup(group)
                                 setState({
@@ -132,13 +131,13 @@ export function RecentGroupListCard({
                                 })
                               }}
                             >
-                              Undo
+                              Deshacer
                             </ToastAction>
                           ),
                         })
                       }}
                     >
-                      Remove from recent groups
+                      Eliminar de grupos recientes
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       onClick={(event) => {
@@ -152,7 +151,7 @@ export function RecentGroupListCard({
                         refreshGroupsFromStorage()
                       }}
                     >
-                      {isArchived ? <>Unarchive group</> : <>Archive group</>}
+                      {isArchived ? <>Desarchivar grupo</> : <>Archivar grupo</>}
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -168,7 +167,7 @@ export function RecentGroupListCard({
                   <div className="flex items-center">
                     <Calendar className="w-3 h-3 inline mx-1" />
                     <span>
-                      {new Date(details.createdAt).toLocaleDateString('en-US', {
+                      {new Date(details.createdAt).toLocaleDateString('es-ES', {
                         dateStyle: 'medium',
                       })}
                     </span>

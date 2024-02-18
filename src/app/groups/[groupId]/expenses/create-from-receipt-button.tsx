@@ -60,10 +60,10 @@ export function CreateFromReceiptButton({
   const handleFileChange = async (file: File) => {
     if (file.size > MAX_FILE_SIZE) {
       toast({
-        title: 'The file is too big',
-        description: `The maximum file size you can upload is ${formatFileSize(
+        title: 'El archivo es demasiado grande',
+        description: `El tamaño máximo de archivo que puede cargar es ${formatFileSize(
           MAX_FILE_SIZE,
-        )}. Yours is ${formatFileSize(file.size)}.`,
+        )}. El tamaño de su archivo es ${formatFileSize(file.size)}.`,
         variant: 'destructive',
       })
       return
@@ -72,9 +72,9 @@ export function CreateFromReceiptButton({
     const upload = async () => {
       try {
         setPending(true)
-        console.log('Uploading image…')
+        console.log('Subiendo la imagen…')
         let { url } = await uploadToS3(file)
-        console.log('Extracting information from receipt…')
+        console.log('Extrayendo información del recibo…')
         const { amount, categoryId, date, title } =
           await extractExpenseInformationFromImage(url)
         const { width, height } = await getImageData(file)
@@ -82,13 +82,13 @@ export function CreateFromReceiptButton({
       } catch (err) {
         console.error(err)
         toast({
-          title: 'Error while uploading document',
+          title: 'Error al cargar el documento',
           description:
-            'Something wrong happened when uploading the document. Please retry later or select a different file.',
+            'Algo salió mal al cargar el documento. Vuelva a intentarlo más tarde o seleccione un archivo diferente.',
           variant: 'destructive',
           action: (
-            <ToastAction altText="Retry" onClick={() => upload()}>
-              Retry
+            <ToastAction altText="Reintentar" onClick={() => upload()}>
+              Reintentar
             </ToastAction>
           ),
         })
@@ -114,25 +114,24 @@ export function CreateFromReceiptButton({
         <Button
           size="icon"
           variant="secondary"
-          title="Create expense from receipt"
+          title="Crear gasto desde recibo"
         >
           <Receipt className="w-4 h-4" />
         </Button>
       }
       title={
         <>
-          <span>Create from receipt</span>
+          <span>Crear desde recibo</span>
           <Badge className="bg-pink-700 hover:bg-pink-600 dark:bg-pink-500 dark:hover:bg-pink-600">
             Beta
           </Badge>
         </>
       }
-      description={<>Extract the expense information from a receipt photo.</>}
+      description={<>Extraer la información del gasto de una foto del recibo.</>}
     >
       <div className="prose prose-sm dark:prose-invert">
         <p>
-          Upload the photo of a receipt, and we’ll scan it to extract the
-          expense information if we can.
+          Sube la foto de un recibo y lo escanearemos para extraer la información del gasto si es posible.
         </p>
         <div>
           <FileInput
@@ -143,7 +142,7 @@ export function CreateFromReceiptButton({
             <Button
               variant="secondary"
               className="row-span-3 w-full h-full relative"
-              title="Create expense from receipt"
+              title="Crear gasto desde recibo"
               onClick={openFileDialog}
               disabled={pending}
             >
@@ -156,21 +155,21 @@ export function CreateFromReceiptButton({
                     width={receiptInfo.width}
                     height={receiptInfo.height}
                     className="w-full h-full m-0 object-contain drop-shadow-lg"
-                    alt="Scanned receipt"
+                    alt="Recibo escaneado"
                   />
                 </div>
               ) : (
                 <span className="text-xs sm:text-sm text-muted-foreground">
-                  Select image…
+                  Seleccionar imagen…
                 </span>
               )}
             </Button>
             <div className="col-span-2">
-              <strong>Title:</strong>
-              <div>{receiptInfo ? receiptInfo.title ?? <Unknown /> : '…'}</div>
+              <strong>Título:</strong>
+              <div>{receiptInfo ? receiptInfo.title ?? <Desconocido /> : '…'}</div>
             </div>
             <div className="col-span-2">
-              <strong>Category:</strong>
+              <strong>Categoría:</strong>
               <div>
                 {receiptInfo ? (
                   receiptInfoCategory ? (
@@ -186,7 +185,7 @@ export function CreateFromReceiptButton({
                       <span>{receiptInfoCategory.name}</span>
                     </div>
                   ) : (
-                    <Unknown />
+                    <Desconocido />
                   )
                 ) : (
                   '' || '…'
@@ -194,13 +193,13 @@ export function CreateFromReceiptButton({
               </div>
             </div>
             <div>
-              <strong>Amount:</strong>
+              <strong>Monto:</strong>
               <div>
                 {receiptInfo ? (
                   receiptInfo.amount ? (
                     <>{formatCurrency(groupCurrency, receiptInfo.amount)}</>
                   ) : (
-                    <Unknown />
+                    <Desconocido />
                   )
                 ) : (
                   '…'
@@ -208,7 +207,7 @@ export function CreateFromReceiptButton({
               </div>
             </div>
             <div>
-              <strong>Date:</strong>
+              <strong>Fecha:</strong>
               <div>
                 {receiptInfo ? (
                   receiptInfo.date ? (
@@ -216,7 +215,7 @@ export function CreateFromReceiptButton({
                       new Date(`${receiptInfo?.date}T12:00:00.000Z`),
                     )
                   ) : (
-                    <Unknown />
+                    <Desconocido />
                   )
                 ) : (
                   '…'
@@ -225,7 +224,7 @@ export function CreateFromReceiptButton({
             </div>
           </div>
         </div>
-        <p>You’ll be able to edit the expense information next.</p>
+        <p>Puedes editar la información del gasto a continuación.</p>
         <div className="text-center">
           <Button
             disabled={pending || !receiptInfo}
@@ -244,7 +243,7 @@ export function CreateFromReceiptButton({
               )
             }}
           >
-            Continue
+            Continuar
           </Button>
         </div>
       </div>
@@ -252,11 +251,11 @@ export function CreateFromReceiptButton({
   )
 }
 
-function Unknown() {
+function Desconocido() {
   return (
     <div className="flex gap-1 items-center text-muted-foreground">
       <FileQuestion className="w-4 h-4" />
-      <em>Unknown</em>
+      <em>Desconocido</em>
     </div>
   )
 }
